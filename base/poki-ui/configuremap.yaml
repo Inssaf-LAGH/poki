@@ -5,4 +5,6 @@ kind: ConfigMap
 metadata:
   name: poki-cm
 data:
-  API_URL: "http://google.fr"
+  POKEDEX_NAME: "the name of your Pokédex"
+  POKEDEX_START_NUMBER: "the starting number of your Pokédex, relative to the national dex"
+  POKEDEX_END_NUMBER: "  2 "
