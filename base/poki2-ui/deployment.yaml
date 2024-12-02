@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poki2-ui
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: poki2-ui
+  template:
+    metadata:
+      labels:
+        app: poki2-ui
+    spec:
+      containers:
+      - image: docker.io/library/pokeapi:0.1
+        name: poki2-ui
+        ports:
+        - containerPort: 3000
+          #mettre ne place une variable denv
+        env:
+           - name : POKEDEX_NAME
+             valueFrom :
+               configMapKeyRef:
+                 key: API_URL
+                 name : poki2-cm
+           - name: POKEDEX_START_NUMBER
+             valueFrom:
+               configMapKeyRef:
+                 key: API_URL
+                 name: poki2-cm
+           - name: POKEDEX_END_NUMBER
+             valueFrom:
+               configMapKeyRef:
+                 key: API_URL
+                 name: poki2-cm

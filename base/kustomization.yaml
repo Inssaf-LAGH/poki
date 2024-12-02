@@ -3,5 +3,7 @@ kind: Kustomization
 
 namespace: poki-kustomize
 
+
 resources:
 - poki-ui/
+- poki2-ui/
