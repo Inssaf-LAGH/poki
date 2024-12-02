@@ -4,6 +4,6 @@ kind: ConfigMap
 metadata:
   name: poki2-cm
 data:
-  POKEDEX_NAME: "the name of your Pokédex"
-  POKEDEX_START_NUMBER: "kdjkdjx"
+  POKEDEX_NAME: "mon pokemon"
+  POKEDEX_START_NUMBER: "2"
   POKEDEX_END_NUMBER: "  2 "
