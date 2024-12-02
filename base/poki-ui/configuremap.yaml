@@ -1,0 +1,8 @@
+#fichier que je vais pouvoir monter dans mon pod
+# cest comme les volumes
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: poki-cm
+data:
+  API_URL: "http://google.fr"
