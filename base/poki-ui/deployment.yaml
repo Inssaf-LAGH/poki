@@ -23,15 +23,15 @@ spec:
            - name : POKEDEX_NAME
              valueFrom :
                configMapKeyRef:
-                 key: API_URL
+                 key: POKEDEX_NAME
                  name : poki-cm
            - name: POKEDEX_START_NUMBER
              valueFrom:
                configMapKeyRef:
-                 key: API_URL
+                 key: POKEDEX_START_NUMBER
                  name: poki-cm
            - name: POKEDEX_END_NUMBER
              valueFrom:
                configMapKeyRef:
-                 key: API_URL
+                 key: POKEDEX_END_NUMBER
                  name: poki-cm
